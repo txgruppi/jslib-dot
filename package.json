@@ -1,0 +1,23 @@
+{
+  "name": "dot",
+  "version": "0.0.0",
+  "description": "Dot notation setter and getter",
+  "main": "dot.js",
+  "scripts": {
+    "test": "mocha --ui bdd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/txgruppi/jslib-dot"
+  },
+  "author": "Tarcísio Gruppi <txgruppi@gmail.com> (http://github.com/txgruppi)",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/txgruppi/jslib-dot/issues"
+  },
+  "homepage": "https://github.com/txgruppi/jslib-dot",
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "~1.8.1"
+  }
+}
