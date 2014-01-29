@@ -1,5 +1,8 @@
 # Dot notation setter and getter
 
+[![Build Status](https://travis-ci.org/txgruppi/jslib-dot.png?branch=master)](https://travis-ci.org/txgruppi/jslib-dot)
+[![Code Climate](https://codeclimate.com/github/txgruppi/jslib-dot.png)](https://codeclimate.com/github/txgruppi/jslib-dot)
+
 Simple way to set/get values using dot notation
 
 ## Usage
