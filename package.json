@@ -1,5 +1,5 @@
 {
-  "name": "dot",
+  "name": "jslib-dot",
   "version": "0.0.0",
   "description": "Dot notation setter and getter",
   "main": "dot.js",
