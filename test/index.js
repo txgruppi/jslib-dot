@@ -58,7 +58,7 @@ describe('dot', function(){
     });
 
     it('should get a property at first level', function(){
-      expect(dot.get(this.data, 'name')).to.be.equal('dot');
+      expect(dot.get(this.data, 'name')).to.be.equal('jslib-dot');
     });
 
     it('should get a property from any level', function(){
@@ -101,6 +101,12 @@ describe('dot', function(){
       dot.set(this.data, 'array.1', 'one');
       expect(this.data.array[1]).to.be.equal('one');
       expect(this.data.array).to.be.an.instanceof(Array);
+    });
+
+    it('should create an array of objects', function(){
+      dot.set(this.data, 'languages.0.name', 'JavaScript');
+      dot.set(this.data, 'languages.1.name', 'Go');
+      expect(JSON.stringify(this.data)).to.be.equal('{"languages":[{"name":"JavaScript"},{"name":"Go"}]}');
     });
 
     it('should set to undefined if no value is given', function(){

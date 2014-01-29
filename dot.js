@@ -19,7 +19,14 @@
   };
 
   dot.set = function(obj, path, value) {
-    for (path = path.split('.'); obj && path.length-1; obj = obj[path.shift()] = (obj[path[0]] || (/^\d+$/.test(path[0]) ? [] : {})));
+    path = path.split('.');
+    for (;obj && path.length-1; path.shift()) {
+      if (obj[path[0]]) {
+        obj = obj[path[0]];
+      } else {
+        obj = obj[path[0]] = /^\d+$/.test(path[1]) ? [] : {};
+      }
+    }
     obj[path.shift()] = value;
   };
 
