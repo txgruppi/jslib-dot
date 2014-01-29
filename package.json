@@ -4,7 +4,8 @@
   "description": "Dot notation setter and getter",
   "main": "./lib/dot.js",
   "scripts": {
-    "test": "mocha --ui bdd"
+    "test": "mocha --ui bdd",
+    "coverage": "mv lib lib-orig && jscoverage lib-orig lib && `npm bin`/mocha -R html-cov > coverage.html && rm -rf lib && mv lib-orig lib"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,6 @@
   "homepage": "https://github.com/txgruppi/jslib-dot",
   "devDependencies": {
     "mocha": "~1.17.1",
-    "chai": "~1.8.1",
-    "mocha-lcov-reporter": "0.0.1"
+    "chai": "~1.8.1"
   }
 }
