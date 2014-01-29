@@ -105,7 +105,7 @@ describe('dot', function(){
     it('should create an array for numeric indexes', function(){
       dot.set(this.data, 'array.1', 'one');
       expect(this.data.array[1]).to.be.equal('one');
-      expect(this.data.array.constructor).to.be.strict.equal(Array);
+      expect(this.data.array).to.be.an.instanceof(Array);
     });
 
     it('should create an array of objects', function(){
