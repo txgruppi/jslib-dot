@@ -14,6 +14,14 @@ dot.set(doc, 'user.lastName', 'Gruppi');
 console.log(doc); // {user: {firstName: "Tarcísio", lastName: "Gruppi"}}
 ```
 
+```js
+var dot = require('jslib-dot');
+var doc = {};
+dot.set(doc, 'languages.0.name', 'JavaScript');
+dot.set(doc, 'languages.1.name', 'Go');
+console.log(doc); // {languages:[{name:"JavaScript"},{name:"Go"}]}
+```
+
 ### Getter
 
 ```js
