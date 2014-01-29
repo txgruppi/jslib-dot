@@ -23,38 +23,43 @@ describe('dot', function(){
 
   context('getter', function(){
     before(function(){
-      this.data = require(path.join(__dirname, '..', 'package.json'));
-      this.data.array = [
-        'zero',
-        'one',
-        'two',
-      ];
-      this.data.arrayOfObjects = [
-        {
-          value: 0,
-          arr: [
-            {deep: 'a'},
-            {deep: 'b'},
-            {deep: 'c'},
-          ]
+      this.data = {
+        name: "jslib-dot",
+        scripts: {
+          test: "mocha --ui bdd"
         },
-        {
-          value: 1,
-          arr: [
-            {deep: 'd'},
-            {deep: 'e'},
-            {deep: 'f'},
-          ]
-        },
-        {
-          value: 2,
-          arr: [
-            {deep: 'g'},
-            {deep: 'h'},
-            {deep: 'i'},
-          ]
-        },
-      ];
+        array: [
+          'zero',
+          'one',
+          'two',
+        ],
+        arrayOfObjects: [
+          {
+            value: 0,
+            arr: [
+              {deep: 'a'},
+              {deep: 'b'},
+              {deep: 'c'},
+            ]
+          },
+          {
+            value: 1,
+            arr: [
+              {deep: 'd'},
+              {deep: 'e'},
+              {deep: 'f'},
+            ]
+          },
+          {
+            value: 2,
+            arr: [
+              {deep: 'g'},
+              {deep: 'h'},
+              {deep: 'i'},
+            ]
+          },
+        ]
+      };
     });
 
     it('should get a property at first level', function(){
