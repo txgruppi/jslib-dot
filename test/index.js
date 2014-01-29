@@ -113,5 +113,37 @@ describe('dot', function(){
       dot.set(this.data, 'a.path.for.nothing');
       expect(this.data.a.path.for.nothing).to.be.undefined;
     });
+
+    it('should be possible do build complex documents', function(){
+      var expected = {
+        "user": {
+          "name": "Tarcísio Gruppi",
+          "email": "txgruppi@gmail.com",
+          "url": "http://txgruppi.com"
+        },
+        "languages": [
+          {
+            "name": "PHP",
+            "ext": ".php"
+          },
+          {
+            "name": "JavaScript",
+            "ext": ".js"
+          },
+          {
+            "name": "Go",
+            "ext": ".go"
+          }
+        ]
+      };
+      dot.set(this.data, 'user', {name: 'Tarcísio Gruppi'})
+      dot.set(this.data, 'user.email', 'txgruppi@gmail.com');
+      dot.set(this.data, 'user.url', 'http://txgruppi.com');
+      dot.set(this.data, 'languages', [{name: 'PHP', ext: '.php'}, {name: 'CoffeeScript', ext: '.coffee'}]);
+      dot.set(this.data, 'languages.1', {name: 'JavaScript', ext: '.js'});
+      dot.set(this.data, 'languages.2.name', 'Go');
+      dot.set(this.data, 'languages.2.ext', '.go');
+      expect(this.data).to.be.deep.equal(expected);
+    });
   });
 });
