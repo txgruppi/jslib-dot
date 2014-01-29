@@ -20,5 +20,21 @@
   "devDependencies": {
     "mocha": "~1.17.1",
     "chai": "~1.8.1"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "harness" : "mocha",
+    "browsers": [
+      "chrome/31.0",
+      "firefox/25.0",
+      "iexplore/8.0",
+      "iexplore/9.0",
+      "iexplore/10.0",
+      "safari/6.0",
+      "opera/17.0",
+      "iphone/6.0",
+      "ipad/6.0",
+      "android-browser/4.2"
+    ]
   }
 }
