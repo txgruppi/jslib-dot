@@ -4,8 +4,8 @@
   function mapItemWithPath(path) {
     return function(item) {
       return dot.get(item, path);
-    }
-  }
+    };
+  };
 
   dot.get = function(obj, path) {
     path = path.split('.');
