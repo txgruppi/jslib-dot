@@ -9,7 +9,7 @@ Simple way to set/get values using dot notation
 ```js
 var dot = require('jslib-dot');
 var doc = {};
-dot.set(doc, 'user.firstName, 'Tarcísio');
+dot.set(doc, 'user.firstName, 'Tarcisio');
 dot.set(doc, 'user.lastName', 'Gruppi');
 console.log(doc); // {user: {firstName: "Tarcísio", lastName: "Gruppi"}}
 ```
