@@ -60,3 +60,4 @@ $RECYCLE.BIN/
 *~
 
 *.lcov
+coverage.html
