@@ -1,15 +1,19 @@
 (function(){
   var dot = {}, root = this;
 
+  function mapItemWithPath(path) {
+    return function(item) {
+      return dot.get(item, path);
+    }
+  }
+
   dot.get = function(obj, path) {
     path = path.split('.');
 
     while (obj && path.length) {
-      if (path[0] == '$') {
+      if (path[0] === '$') {
         path = path.slice(1).join('.');
-        return obj.map(function(item){
-          return dot.get(item, path);
-        });
+        return obj.map(mapItemWithPath(path));
       } else {
         obj = obj[path.shift()];
       }
